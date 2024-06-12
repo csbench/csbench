@@ -1,4 +1,4 @@
-# MathVista: Evaluating Math Reasoning in Visual Contexts
+# CS-Bench: A Comprehensive Benchmark for Large Language Models towards Computer Science Mastery
 
 ![MathQA](https://img.shields.io/badge/Task-MathQA-red) 
 ![Mathematical Reasoning](https://img.shields.io/badge/Task-Mathematical_Reasoning-red) 
