@@ -9,7 +9,6 @@
 ![GPT-4](https://img.shields.io/badge/Model-GPT--4-green) 
 ![Gemini](https://img.shields.io/badge/Model-Gemini-green)
 ![GPT-4V](https://img.shields.io/badge/Model-GPT--4V-green)
-<img width="1419" alt="71b8f968a54043af38f2a235d30a50f" src="https://github.com/csbench/csbench/assets/171561566/808b1fad-73cc-496f-9bb0-cbe271695578">
 
 Code for the Paper "[MathVista: Evaluating Mathematical Reasoning of Foundation Models in Visual Contexts](https://arxiv.org/abs/2310.02255)".
 
