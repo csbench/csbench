@@ -189,10 +189,37 @@ Some notations in the table:
 
 <p align="center">
     <img src="assets/appendix_pie.png" width="90%"> <br>
-    The leaderboard of LLMs on <b>CS-Bench</b>.
 </p>
 
 ### Exmaples
+<details>
+<summary>🔍Examples of samples in different domains.</summary>
+<p align="center">
+    <img src="assets/table_5.png" width="90%"> <br>
+</p>
+</details>
+
+<details>
+<summary>🔍Examples of different task formats.</summary>
+<p align="center">
+    <img src="assets/table_6.png" width="90%"> <br>
+</p>
+</details>
+
+<details>
+<summary>🔍Examples of knowledge-type and reasoning-type./summary>
+<p align="center">
+    <img src="assets/table_7.png" width="90%"> <br>
+</p>
+</details>
+
+<details>
+<summary>🔍Examples of different languages.</summary>
+<p align="center">
+    <img src="assets/table_8.png" width="90%"> <br>
+</p>
+</details>
+
 
 
 
