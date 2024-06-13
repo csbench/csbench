@@ -54,7 +54,7 @@ For more details, please refer to the project page with dataset exploration and 
 - [☕ Stay Connected!](https://github.com/lupantech/MathVista/blob/main/README.md#coffee-stay-connected)
 - [✅ Cite](https://github.com/lupantech/MathVista/blob/main/README.md#white_check_mark-cite)
 - [🧠 Related Work](https://github.com/lupantech/MathVista/blob/main/README.md#-related-work)
-- [🤝 Contributors](https://github.com/lupantech/MathVista/blob/main/README.md#-contributors)
+- [🤝 Contributors](https://github.com/csbench/csbench/blob/main/README.md#-contributors)
 
 
 
