@@ -100,15 +100,10 @@ To submit your results to the leaderboard on the **test** subset, please send to
   The leaderboard of LLMs on <b>CS-Bench (EN) </b>.
 </p>
 
-<p align="center">
-    <img src="assets/leaderboard.png" width="90%"> <br>
- The leaderboard of LLMs on <b>CS-Bench (EN)</b>.
-</p>
-
 ### Detailed scores
 
 
-| Model               | Data Struc & Algo |               |               | Computer Organization |               |               | Computer Network |               |               | Operating System |               |               | Overall          |               |               |
+| Model               | DSA |               |               | CO |               |               | CN |               |               | OS |               |               | Overall          |               |               |
 |---------------------|-------------------|---------------|---------------|-----------------------|---------------|---------------|------------------|---------------|---------------|------------------|---------------|---------------|------------------|---------------|---------------|
 |                     | Klg               | Rng           | Avg           | Klg                   | Rng           | Avg           | Klg              | Rng           | Avg           | Klg              | Rng           | Avg           | Klg              | Rng           | Avg           |
 | Random              | 28.04             | 24.63         | 26.65         | 26.57                 | 25.24         | 26.13         | 26.34            | 22.49         | 24.98         | 29.06            | 24.23         | 27.27         | 27.4             | 24.12         | 26.2           |
@@ -147,35 +142,54 @@ To submit your results to the leaderboard on the **test** subset, please send to
 
 Some notations in the table:
 
-- **Human Performance\*:** Average human performance from AMT annotators who have high school diplomas or above.
-
-- **Gemini**: the fine-grained scores are from **the Gemini Team, Google**.
-
-- **GPT-4V (Playground)**: the launched playground at https://chat.openai.com/?model=gpt-4; experimental dates range from Oct 7, 2023, to Oct 15, 2023
-
-- **GPT-4**: the `gpt-4-0613` engine
-
-- **Method types**
-  -  **MoE 🤖:** Mixture of Experts
-  -  **LMM 🖼️:** Large Multimodal Model
-  -  **Tool 🛠️:** Tool-augmented Large Language Model
+- **Domains**
+  -  **DSA:** **D**ata **S**tructure and **A**lgorithm
+  -  **CO** **C**omputer **O**rganization
+  -  **CN:** **C**omputer **N**etwork
+  -  **OS:** **O**perating **S**ystem
   
-- **Task types:** 
-  - **FQA:** figure question answering
-  - **GPS:** geometry problem solving
-  - **MWP:** math word problem solving
-  -  **TQA:** textbook question answering
-  - **VQA:** visual question answering
-- **Mathematical reasoning types:** 
-  - **ALG:** algebraic reasoning
-  - **ARI:** arithmetic reasoning
-  -  **GEO:** geometry reasoning
-  - **LOG:** logical reasoning
-  - **NUM:** numeric commonsense reasoning
-  - **SCI:** scientific reasoning 
-  - **STA:** statistical reasoning
+- **Types:** 
+  - **Klg:** **k**now**l**ed**g**e-type
+  - **Rng:** **r**easo**n**in**g**-type
+  - **Avg:** **Av**era**g**e
 
-🔔 The automatic evaluation on [CodaLab](https://codalab.org/) are under construction. 
+## 🏆 Leaderboard on CS-Bench (Chinese) 🏆
+
+### Overall
+
+<p align="center">
+    <img src="assets/web_leaderboard_cn.png" width="90%"> <br>
+  The leaderboard of LLMs on <b>CS-Bench (CN) </b>.
+</p>
+
+
+### Detailed scores
+
+| Model | DSA |  |  | CO |  |  | CN |  |  | OS |  |  | Overall |  |  |
+|-------|-------------------|--|--|-----------------------|--|--|-----------------|--|--|------------------|--|--|---------|--|--|
+|       | Klg               | Rng | Avg | Klg              | Rng | Avg | Klg        | Rng | Avg | Klg           | Rng | Avg | Klg     | Rng | Avg |
+| **Open-source LLM (Scale < 10B)** | | | | | | | | | | | | | | | |
+| Random | 28.04 | 24.63 | 26.65 | 26.57 | 25.24 | 26.13 | 26.34 | 22.49 | 24.98 | 29.06 | 24.23 | 27.27 | 27.4 | 24.12 | 26.20 |
+| ChatGLM3-6B | 41.74 | 32.48 | 37.97 | 44.07 | 34.91 | 41.05 | 49.02 | 32.31 | 43.14 | 43.02 | 32.86 | 35.98 | 44.67 | 33.09 | 40.45 |
+| Baichuan2-7B | 42.04 | 31.51 | 37.75 | 44.93 | 37.88 | 42.61 | 50.74 | 31.11 | 43.83 | 42.18 | 34.07 | 39.16 | 45.27 | 33.47 | 40.97 |
+| InternLm2-7B | 41.97 | 34.54 | 38.95 | 55.77 | 38.67 | 50.13 | 60.05 | 41.86 | 53.65 | 50.94 | 44.07 | 48.39 | 52.71 | 39.61 | 47.94 |
+| Qwen1.5-7B | 49.13 | 37.71 | 44.48 | 60.86 | 44.48 | 55.46 | 60.90 | 45.68 | 55.54 | 58.38 | 48.24 | 54.61 | 57.62 | 43.79 | 52.59 |
+| Llama3-8B | 50.47 | 29.68 | 42.01 | 50.81 | 36.30 | 46.03 | 56.09 | 42.21 | 51.21 | 52.01 | 38.85 | 47.12 | 52.46 | 36.61 | 46.69 |
+| Llama3-8B-Chinese | 49.20 | 33.72 | 42.90 | 54.99 | 33.09 | 47.77 | 58.77 | 48.59 | 55.19 | 55.58 | 41.10 | 50.20 | 54.84 | 39.17 | 49.13 |
+| **Open-source LLM (Scale > 10B)** | | | | | | | | | | | | | | | |
+| Baichuan2-13B | 48.83 | 34.68 | 43.07 | 54.18 | 36.00 | 48.18 | 55.11 | 39.85 | 49.74 | 49.19 | 40.27 | 45.88 | 52.10 | 37.63 | 46.83 |
+| Qwen1.5-14B | 51.47 | 48.81 | 50.39 | 64.43 | 46.85 | 58.63 | 68.69 | 55.18 | 63.94 | 69.58 | 56.59 | 64.76 | 63.78 | 51.81 | 59.42 |
+| InternLm2-20B | 51.97 | 38.03 | 46.30 | 58.36 | 45.76 | 54.20 | 60.60 | 50.50 | 57.05 | 58.70 | 45.66 | 53.86 | 57.59 | 44.85 | 52.95 |
+| Qwen1.5-32B | 55.89 | 56.70 | 56.22 | 67.74 | 60.00 | 65.19 | 70.33 | 66.83 | 69.10 | 72.40 | 62.03 | 68.55 | 66.77 | 61.35 | 64.80 |
+| Llama3-70B | 53.28 | 55.41 | 54.15 | 67.97 | 49.58 | 61.91 | 71.07 | 61.81 | 67.81 | 65.29 | 57.36 | 62.35 | 64.86 | 56.18 | 61.70 |
+| Qwen1.5-72B | 58.16 | 52.02 | 55.66 | 70.28 | 52.91 | 64.55 | 75.25 | 66.23 | 72.08 | 74.12 | 63.19 | 70.06 | 69.73 | 58.52 | 65.64 |
+| **Closed-source LLM** | | | | | | | | | | | | | | | |
+| GPT-3 | 54.15 | 39.63 | 48.24 | 60.86 | 43.27 | 55.06 | 64.29 | 48.89 | 58.87 | 56.36 | 39.84 | 50.22 | 59.27 | 42.96 | 53.33 |
+| GPT-4 | 60.03 | 60.28 | 60.13 | 77.60 | 60.24 | 71.88 | 73.50 | 72.86 | 73.27 | 71.46 | 65.60 | 69.29 | 71.06 | 64.80 | 68.78 |
+| GPT-4o | 61.67 | 66.45 | 63.62 | 78.86 | 55.32 | 71.10 | 78.61 | 74.17 | 77.05 | 72.66 | 69.94 | 71.67 | 73.46 | 66.69 | 71.00 |
+| GLM-4 | 58.12 | 58.37 | 58.22 | 74.03 | 59.49 | 69.24 | 71.65 | 70.21 | 71.14 | 73.31 | 67.14 | 71.06 | 69.55 | 63.75 | 67.44 |
+| ERNIE-3.5 | 58.16 | 55.62 | 57.13 | 74.56 | 58.73 | 69.34 | 74.68 | 65.16 | 71.33 | 72.13 | 63.37 | 68.94 | 70.28 | 60.63 | 66.77 |
+| ERNIE-4 | 57.92 | 62.33 | 59.72 | 78.24 | 64.18 | 73.60 | 76.27 | 69.74 | 73.97 | 75.84 | 69.54 | 73.54 | 72.49 | 66.36 | 70.26 |
 
 
 ## 📊 Dataset Examples
