@@ -1,14 +1,10 @@
 # CS-Bench: A Comprehensive Benchmark for Large Language Models towards Computer Science Mastery
 
-![MathQA](https://img.shields.io/badge/Task-MathQA-red) 
-![Mathematical Reasoning](https://img.shields.io/badge/Task-Mathematical_Reasoning-red) 
-![Multi-Modal](https://img.shields.io/badge/Task-Multi--Modal-red) 
-![ScienceQA](https://img.shields.io/badge/Dataset-MathVista-blue)  
-![Claude-4](https://img.shields.io/badge/Model-Claude--2-green) 
-![ChatGPT](https://img.shields.io/badge/Model-ChatGPT-green) 
-![GPT-4](https://img.shields.io/badge/Model-GPT--4-green) 
-![Gemini](https://img.shields.io/badge/Model-Gemini-green)
-![GPT-4V](https://img.shields.io/badge/Model-GPT--4V-green)
+![Large Language Models](https://img.shields.io/badge/Task-Large%20Language%20Models-red)
+![Computer Science](https://img.shields.io/badge/Field-Computer%20Science-blue)
+![Dataset](https://img.shields.io/badge/Dataset-CS--Bench-green)
+
+
 
 Code for the Paper "[CS-Bench: A Comprehensive Benchmark for Large Language Models towards Computer Science Mastery](https://pris-nlp.github.io/)".
 
