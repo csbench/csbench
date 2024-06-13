@@ -80,18 +80,9 @@ For more details, you can find our project page [here](https://csbench.github.io
 
 ### Contributing the Leaderboard
 
-🚨🚨 The leaderboard is continuously being updated. 
+The evaluation instructions are available at [📝 Evaluation on CS-Bench](https://github.com/csbench/csbench?tab=readme-ov-file#-evaluations-on-csbench) .
 
-The evaluation instructions are available at [🔮 Evaluations on MathVista](https://github.com/lupantech/MathVista?tab=readme-ov-file#-evaluations-on-mathvista) and [📝 Evaluation Scripts of Our Models](https://github.com/lupantech/MathVista?tab=readme-ov-file#-evaluation-scripts-of-our-models).
-
-To submit your results to the leaderboard on the **testmini** subset, please send to [this email](mailto:lupantech@gmail.com) with your result json file and score json file, referring to the template files below:
-
-- [output_testmini_template_for_leaderboard_submission.json](https://github.com/lupantech/MathVista/blob/main/results/leaderboad_submission_template/output_testmini_template_for_leaderboard_submission.json)
-- [scores_testmini_template_for_leaderboard_submission.json](https://github.com/lupantech/MathVista/blob/main/results/leaderboad_submission_template/scores_testmini_template_for_leaderboard_submission.json)
-
-To submit your results to the leaderboard on the **test** subset, please send to [this email](mailto:lupantech@gmail.com) with your result file (**we will generate the score file for you**),  referring to the template file below:
-
-- [output_test_template_for_leaderboard_submission.json](https://github.com/lupantech/MathVista/blob/main/results/leaderboad_submission_template/output_test_template_for_leaderboard_submission.json)
+To submit your results to the leaderboard, please send to  [this email](csbench2024@gmail.com) with your result json files.
 
 ### Overall
 
