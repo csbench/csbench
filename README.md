@@ -191,73 +191,61 @@ Some notations in the table:
     <img src="assets/appendix_pie.png" width="90%"> <br>
 </p>
 
-### Exmaples
 <details>
-<summary>🔍Examples of samples in different domains.</summary>
+<summary>The length distribution of questions and answers on CS-Bench (EN).</summary>
+<p align="center">
+    <img src="assets/appendix_length_distribution_en_detail.png" width="90%"> <br>
+</p>
+</details>
+
+<details>
+<summary>The length distribution of questions and answers on CS-Bench (CN).</summary>
+<p align="center">
+    <img src="assets/appendix_length_distribution_cn_detail.png" width="90%"> <br>
+</p>
+</details>
+
+<details>
+<summary>Summary of 26 fine-grained subfields on CS-Bench.</summary>
 <p align="center">
     <img src="assets/table_5.png" width="90%"> <br>
 </p>
 </details>
 
+
+### Exmaples
 <details>
-<summary>🔍Examples of different task formats.</summary>
+<summary>🔍Examples of samples in different domains.</summary>
 <p align="center">
     <img src="assets/table_6.png" width="90%"> <br>
 </p>
 </details>
 
+
 <details>
-<summary>🔍Examples of knowledge-type and reasoning-type./summary>
+<summary>🔍Examples of different task formats.</summary>
 <p align="center">
     <img src="assets/table_7.png" width="90%"> <br>
 </p>
 </details>
 
+
 <details>
-<summary>🔍Examples of different languages.</summary>
+<summary>🔍Examples of knowledge-type and reasoning-type.</summary>
 <p align="center">
     <img src="assets/table_8.png" width="90%"> <br>
 </p>
 </details>
 
 
-
-
-
 <details>
-<summary>🔍 Click to expand/collapse more examples</summary>
-
-Examples of seven mathematical reasoning skills:
-
-1. Arithmetic Reasoning
-
-<img src="https://raw.githubusercontent.com/lupantech/MathVista/main/assets/skills/ari.png" style="zoom:40%;" />
-
-2. Statistical Reasoning
-
-<img src="https://raw.githubusercontent.com/lupantech/MathVista/main/assets/skills/sta.png" style="zoom:40%;" />
-
-3. Algebraic Reasoning
-
-<img src="https://raw.githubusercontent.com/lupantech/MathVista/main/assets/skills/alg.png" style="zoom:40%;" />
-
-4. Geometry Reasoning
-
-<img src="https://raw.githubusercontent.com/lupantech/MathVista/main/assets/skills/geo.png" style="zoom:40%;" />
-
-5. Numeric Commonsense Reasoning
-
-<img src="https://raw.githubusercontent.com/lupantech/MathVista/main/assets/skills/num.png" style="zoom:40%;" />
-
-6. Scientific Reasoning
-
-<img src="https://raw.githubusercontent.com/lupantech/MathVista/main/assets/skills/sci.png" style="zoom:40%;" />
-
-7. Logical Reasoning
-
-<img src="https://raw.githubusercontent.com/lupantech/MathVista/main/assets/skills/log.png" style="zoom:40%;" />
-
+<summary>🔍Examples of different languages.</summary>
+<p align="center">
+    <img src="assets/table_9.png" width="90%"> <br>
+</p>
 </details>
+
+
 
 ## 📖 Dataset Usage
 
