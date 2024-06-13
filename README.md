@@ -361,326 +361,77 @@ We offer a few demo examples for using the dataset, as follows:
 
 Stay tuned for more demos coming soon!
 
-## 🔮 Evaluations on MathVista
+## 📝 Evaluation on CS-Bench
 
-### Requirements (Optional)
+### Option
+Option 1: Use Step 1 to construct the reasoning prompt, replace Step 2.1 with your own reasoning method to obtain the model's output, and use Steps 3 and 4 to get the model's scores.
 
-Install the Python dependencies if you would like to reproduce our results for ChatGPT, GPT-4, Claude-2, and Bard:
+Option 2: Use Step 1 to construct the reasoning prompt, use the vllm reasoning we provide in Step 2.1 (requires environment setup) to obtain the model's output, and use Steps 3 and 4 to get the model's scores.
 
-```sh
-pip install openai # for ChatGPT and GPT-4
-pip install anthropic # for Claude-2
-pip install bardapi # for Bard
+### Install Dependencies
+```
+git clone https://github.com/csbench/csbench
+cd csbench_code
 ```
 
-For more details, please refer to:
+### Evaluate a new model on CS-Bench:
 
-- [OpenAI API key](https://platform.openai.com/account/api-keys)
-- [Claude API Key](https://docs.anthropic.com/claude/reference/getting-started-with-the-api)
-- [Bard API Key](https://bard.google.com/)
+#### Step 1. Create your input prompt
 
-If you are considering evaluating your own model, these dependencies might be optional.
+Fill in your file path in `create_input.py` and create English(default) or Chinese prompt by running the functions create_en_prompt and create_cn_prompt.
 
-### Downloading Images (Optional)
 
-We provide images in the JPG format. You can download and unzip them using the following commands:
+#### Step 2. Generate Model Answers
 
-```sh
-cd data
-wget https://huggingface.co/datasets/AI4Math/MathVista/resolve/main/images.zip
-unzip images.zip && rm images.zip
+You may use inference engine such as [vLLM](https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html) or [SGLang](https://github.com/sgl-project/sglang?tab=readme-ov-file#using-local-models) to generate your model answers. We will provide our inference code in the near future.
+
+Please ensure that your answer is saved in JSONL format and retains all keys from the original dataset.
+
+#### Step 2.1 Generate Model Answers with vLLM(optional)
+
+vLLM is a fast and easy-to-use library for LLM inference and serving.
+
+##### Getting Started(vLLM)
+
+Visit our [documentation](https://vllm.readthedocs.io/en/latest/) to get started.
+- [Installation](https://vllm.readthedocs.io/en/latest/getting_started/installation.html)
+- [Quickstart](https://vllm.readthedocs.io/en/latest/getting_started/quickstart.html)
+- [Supported Models](https://vllm.readthedocs.io/en/latest/models/supported_models.html)
+
+##### You can install vLLM using pip:
+```
+# (Recommended) Create a new conda environment.
+conda create -n myenv python=3.9 -y
+conda activate myenv
+# Install vLLM with CUDA 12.1.
+pip install vllm
+```
+##### Generate Model Answers:
+Fill in your model path, data save path and other parameters in `run_csbench.sh` and run this script.
+```
+bash run_csbensh.sh
 ```
 
-This step might be optional if you prefer to use the Hugging Face format of the data.
 
-### Evaluation Pipelines
+#### Step 3. Generate Judgments
 
-Recent foundation models have been trained to generate longer responses instead of brief text. As such, we propose a new strategy for benchmarking MathVista. This evaluation process comprises three stages:
-
-**(Step 1) Response Generation** ([generate_response.py](https://github.com/lupantech/MathVista/blob/main/evaluation/generate_response.py)): The models generate responses based on the given input query (prompt). This input query integrates the task description, the question, choices, and metadata. Such a design encourage the models yield responses in the desired format, subsequently enhancing the overall evaluation scores. An example of such an input query is:
-
+If you want to evaluate questions in all formats.Fill in your API in `test_call_llm.py`
+Run the command to generate judgments with GPT:
 ```
-Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.
-Question: Find $m\\angle H$
-Choices:
-(A) 97
-(B) 102
-(C) 107
-(D) 122
+python gen_judgment.py --judge_with_gpt 1 your_file_path
 ```
 
-The task description is defined as follows:
-
-| Question type   | Answer type | Task instruction                                             |
-| --------------- | ----------- | ------------------------------------------------------------ |
-| Multiple-choice | Text        | Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end. |
-| Free-form       | Integer     | Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end. |
-| Free-form       | Float (1)   | Please answer the question requiring a floating-point number with one decimal place and provide the final value, e.g., 1.2, 1.3, 1.4, at the end. |
-| Free-form       | Float (2)   | Please answer the question requiring a floating-point number with two decimal places and provide the final value, e.g., 1.23, 1.34, 1.45, at the end. |
-| Free-form       | List        | Please answer the question requiring a Python list as an answer and provide the final list, e.g., [1, 2, 3], [1.2, 1.3, 1.4], at the end. |
-
-**(Step 2) Answer Extraction** ([extract_answer.py](https://github.com/lupantech/MathVista/blob/main/evaluation/extract_answer.py)): Next, the short answer text is extracted from the detailed response. We propose an answer extractor based on LLMs such as GPT-4. A preliminary study of 200 examples shows that GPT-4 can extract the answer text with more than 99.5% accuracy. Below are examples of extracting short answers from long responses:
-
+If you only want to evaluate questions in 'Multiple-choice' and 'Assertion'.
+Run the command to generate judgments without GPT:
 ```
-# Example 1
-Hint: Please answer the question requiring an integer answer and provide the final value,
-e.g., 1, 2, 3, at the end.
-Question: Which number is missing?
-
-Model response: The number missing in the sequence is 14.
-
-Extracted answer: 14
-
-# Example 2
-Hint: Please answer the question and provide the correct option letter, e.g., A, B, C,
-D, at the end.
-Question: What fraction of the shape is blue?
-Choices: 
-(A) 3/11 
-(B) 8/11 
-(C) 6/11 
-(D) 3/5
-
-Model response: The correct answer is (B) 8/11.
-
-Extracted answer: B
+python gen_judgment.py --judge_with_gpt 0 your_file_path
 ```
 
-**(Step 3) Score Calculation** ([calculate_score.py](https://github.com/lupantech/MathVista/blob/main/evaluation/extract_answer.py)): Finally, the extracted answer is normalized to a required answer format (e.g., an option letter or an integer), and the target metric scores are computed.
-
-## 📝 Evaluation Scripts of Our Models
-
-To execute the evaluation scripts in our paper, ensure your `data` folder has the following structure:
-
+#### Step 4. Show result
+Output model win scores. Run the command to generate judgments without GPT:
 ```
-├── query.json
-├── test.json
-├── testmini.json
-├── images
-    ├── 1.jpg
-    ├── 2.jpg
-    └── ...
-└── texts
-    ├── captions_bard.json
-    └── ocrs_easyocr.json
+python show_result.py your_file_path
 ```
-
-Additionally, ensure that the API keys for ChatGPT, GPT-4, Claude-2, and Bard are properly set up.
-
-### Evaluating Multimodal Bard
-
-If you have setted Multimodal Bard, you can run the following commands:
-
-Generate the response on the **testmini** subset:
-
-```sh
-cd evaluation
-
-python generate_response.py \
---model bard \
---output_dir ../results/bard \
---output_file output_bard.json
-```
-
-Extract the short answer text for score calculation on the **testmini** subset:
-
-```sh
-python extract_answer.py \
---output_dir ../results/bard \
---output_file output_bard.json 
-```
-
-Calculate the final score on the **testmini** subset:
-
-```sh
-python calculate_score.py \
---output_dir ../results/bard \
---output_file output_bard.json \
---score_file scores_bard.json
-```
-
-Generate the response of the **test** subset:
-
-```sh
-python generate_response.py \
---model bard \
---input_file test.json \
---output_dir ../results/bard \
---output_file output_bard_test.json
-```
-
-Extract the short answer text for score calculation on the **test** subset:
-
-```sh
-python extract_answer.py \
---output_dir ../results/bard \
---output_file output_bard_test.json 
-```
-
-### Evaluating Chain-of-Thought GPT-4
-
-Generate the response on the **testmini** subset:
-
-```sh
-cd evaluation
-
-python generate_response.py \
---model gpt-4-0613 \
---output_dir ../results/gpt4 \
---output_file output_gpt4_2shot_solution_use_caption_ocr.json \
---shot_num 2 \
---shot_type solution \
---use_caption \
---use_ocr \
---caption_file ../data/texts/captions_bard.json \
---ocr_file ../data/texts/ocrs_easyocr.json 
-```
-
-Extract the short answer text for score calculation on the **testmini** subset:
-
-```sh
-python extract_answer.py \
---output_dir ../results/gpt4 \
---output_file output_gpt4_2shot_solution_use_caption_ocr.json
-```
-
-Calculate the final score on the **testmini** subset:
-
-```sh
-python calculate_score.py \
---output_dir ../results/gpt4 \
---output_file output_gpt4_2shot_solution_use_caption_ocr.json \
---score_file scores_gpt4_2shot_solution_use_caption_ocr.json
-```
-
-Generate the response of the **test** subset:
-
-```sh
-python generate_response.py \
---model gpt-4-0613 \
--input_file test.json \
---output_dir ../results/gpt4 \
---output_file output_test_gpt4_2shot_code_use_caption_ocr.json \
---shot_num 2 \
---shot_type solution \
---use_caption \
---use_ocr \
---caption_file ../data/texts/captions_bard.json \
---ocr_file ../data/texts/ocrs_easyocr.json 
-```
-
-Extract the short answer text for score calculation on the **test** subset:
-
-```sh
-python extract_answer.py \
---output_dir ../results/bard \
---output_file output_test_gpt4_2shot_code_use_caption_ocr.json 
-```
-
-### Evaluating Program-of-Thought GPT-4
-
-Generate the response on the **testmini** subset:
-
-```sh
-cd evaluation
-
-python generate_response.py \
---model gpt-4-0613 \
---output_dir ../results/gpt4 \
---output_file output_gpt4_2shot_code_use_caption_ocr.json \
---shot_num 2 \
---shot_type code \
---use_caption \
---use_ocr \
---caption_file ../data/texts/captions_bard.json \
---ocr_file ../data/texts/ocrs_easyocr.json 
-```
-
-Extract the short answer text for score calculation on the **testmini** subset:
-
-```sh
-python extract_answer.py \
---output_dir ../results/gpt4 \
---output_file output_gpt4_2shot_code_use_caption_ocr.json \
---response_label execution
-```
-
-Calculate the final score on the **testmini** subset:
-
-```sh
-python calculate_score.py \
---output_dir ../results/gpt4 \
---output_file output_gpt4_2shot_code_use_caption_ocr.json \
---score_file scores_gpt4_2shot_code_use_caption_ocr.json
-```
-
-Generate the response of the **test** subset:
-
-```sh
-python generate_response.py \
---model gpt-4-0613 \
---input_file test.json \
---output_dir ../results/gpt4 \
---output_file output_test_gpt4_2shot_code_use_caption_ocr.json \
---shot_num 2 \
---shot_type code \
---use_caption \
---use_ocr \
---caption_file ../data/texts/captions_bard.json \
---ocr_file ../data/texts/ocrs_easyocr.json 
-```
-
-Extract the short answer text for score calculation on the **test** subset:
-
-```sh
-python extract_answer.py \
---output_dir ../results/gpt4 \
---output_file output_test_gpt4_2shot_code_use_caption_ocr.json \
---response_label execution
-```
-
-### Evaluating More Settings
-
-For additional settings for large language models and other baselines, please refer to the running scripts available in the [`scripts`](https://github.com/lupantech/MathVista/tree/main/scripts) directory.
-
-### Evaluating Large Multimodal Models
-
-We thank [Hritik Bansal](https://sites.google.com/view/hbansal) and the [VisIT-Bench](https://github.com/mlfoundations/VisIT-Bench/tree/main) project for providing easy-to-use [codes](https://github.com/mlfoundations/VisIT-Bench/tree/main/baselines) for evaluating most of the large multimodal models included in our paper.
-
-## 📈 Evaluation Results
-
-<details>
-<summary>Click to expand/collapse the examples.</summary>
-<img src="https://raw.githubusercontent.com/lupantech/MathVista/main/assets/results_examples/5.png" style="zoom:40%;" />
-</details>
-
-<details>
-<summary>Click to expand/collapse the examples.</summary>
-<img src="https://raw.githubusercontent.com/lupantech/MathVista/main/assets/results_examples/6.png" style="zoom:40%;" />
-</details>
-
-<details>
-<summary>Click to expand/collapse the example.</summary>
-<img src="https://raw.githubusercontent.com/lupantech/MathVista/main/assets/results_examples/48.png" style="zoom:40%;" />
-</details>
-
-<details>
-<summary>Click to expand/collapse the example.</summary>
-<img src="https://raw.githubusercontent.com/lupantech/MathVista/main/assets/results_examples/50.png" style="zoom:40%;" />
-</details>
-
-<details>
-<summary>Click to expand/collapse the example.</summary>
-<img src="https://raw.githubusercontent.com/lupantech/MathVista/main/assets/results_examples/52.png" style="zoom:40%;" />
-</details>
-
-<details>
-<summary>Click to expand/collapse the example.</summary>
-<img src="https://raw.githubusercontent.com/lupantech/MathVista/main/assets/results_examples/53.png" style="zoom:40%;" />
-</details>
-We stored the result files from different models in the [results](https://github.com/lupantech/MathVista/tree/main/results/) directory.
-
-🐙 For visualization of these results, visit our [exploration](https://mathvista.github.io/#explorer) page.
 
 ## 📜 License
 
