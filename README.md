@@ -23,6 +23,7 @@ For more details, please refer to the project page with dataset exploration and 
     <img src="assets/csbench_logo_2.png" width="30%"> <br>
   Tentative logo for <b>CS-Bench</b>. 
 </p>
+
 ## Outlines
 
 - [💥 News 💥](https://github.com/lupantech/MathVista/blob/main/README.md#-news-)
@@ -58,54 +59,20 @@ For more details, please refer to the project page with dataset exploration and 
 
 
 ## 💥 News 💥
+- **[2023.6.14]** Our paper is now accessible at https://pris-nlp.github.io/.
+- **[2024.6.13]** Our dataset is now accessible at [Huggingface Datasets](https://huggingface.co/datasets/CS-Bench/CS-Bench).
+- **[2024.6.12]** Our project homepage can be accessed at https://csbench.github.io/.
 
-- **[2024.05.13]** 💥 **OpenAI's GPT-4o Outperforms Humans on MathVista!** For the first time, OpenAI's new GPT-4o model has achieved a higher score than the human average on MathVista, scoring **63.8** compared to humans' **60.3**. Learn more at the [OpenAI blog](https://openai.com/index/hello-gpt-4o/).
-- **[2024.01.16]** 🌟 Our **MathVista** paper has been accepted for an **Oral** presentation at **ICLR 2024** (only top 85 out of over 7200 submissions)! 🎉 Cheers!
-- **[2023.12.21]** 🚀 [Qwen-VL-Plus](https://github.com/QwenLM/Qwen-VL) achieves **43.3%**, establishing itself as the best-performing one in open-sourced models. 🎉 Congratulations!
-- **[2023.12.08]** 🔍 We've updated the leaderboard and radar graphs with the **fine-grained scores** of the **Gemini** family models. Thanks to the Gemini Team and Google for providing us with these results! 👏
-- **[2023.12.06]** 🚀 Google's newly released multimodal model, [Gemini](https://blog.google/technology/ai/google-gemini-ai/), shows impressive abilities on **MathVista**, achieving a new SOTA performance with **50.3%**! 🎉  Cheers!!
-- **[2023.11.17]** 🌟 Congratulations to [SPHINX (V2)](https://github.com/Alpha-VLLM/LLaMA2-Accessory/tree/main/SPHINX), which is now the SOTA open-source multimodal model on **MathVista**, reaching **36.7%**. 👏
-- **[2023.10.25]** 🚀 Dive into our comprehensive **112-page** evaluation of **GPT-4V**, Bard, and other Large Multimodal Models, encompassing both **quantitative** and **qualitative** insights. [Explore the full paper now!](https://arxiv.org/abs/2310.02255) 📄✨
-- **[2023.10.16]** 🔍 We are working on a comparative study on the **GPT-4V** model. Stay tuned for the detailed report! 📑.
-- **[2023.10.15]** We finished the manual evaluation of **GPT-4V** with the playground chatbot on the *testmini* set on **MathVista**. 🚀 GPT-4V achieves a substantial gain of **15.1%** ⬆️ over Bard, reaching a new record of **49.9%**! 🎉
-- **[2023.10.15]** Our dataset is now accessible at [Huggingface Datasets](https://huggingface.co/datasets/AI4Math/MathVista).
-- **[2023.10.15]** Our dataset is now accessible at [Paper With Code](https://paperswithcode.com/dataset/mathvista).
-- **[2023.10.03]** The top-performing model, 🎭 **Multimodal Bard**, achieved a score of **34.8%** on the *testmini* set for **MathVista** 📊.
-- **[2023.10.03]** Our work was featured by [Aran Komatsuzaki](https://twitter.com/arankomatsuzaki) on [Twitter](https://twitter.com/arankomatsuzaki/status/1709380140717809992). Thanks!
-- **[2023.10.03]** Our paper is now accessible at https://arxiv.org/abs/2310.02255.
 
-## 👀 About MathVista
+## 👀 About CS-Bench
 
-**Large Language Models (LLMs)** and **Large Multimodal Models (LMMs)** exhibit impressive problem-solving skills in many tasks and domains, but their ability in mathematical reasoning in visual contexts has not been systematically studied. To bridge this gap, we present **MathVista**, a benchmark designed to combine challenges from diverse mathematical and visual tasks. It consists of **6,141 examples**, derived from **28 existing multimodal datasets** involving mathematics and **3 newly created datasets** (i.e., **IQTest, FunctionQA, and PaperQA**). Completing these tasks requires fine-grained, deep visual understanding and compositional reasoning, which all state-of-the-art foundation models find challenging.
+**Computer Science (CS)** stands as a testament to the intricacies of human intelligence, profoundly advancing the development of artificial intelligence and modern society. However, the current community of **large language models (LLMs)** overly focuses on benchmarks for analyzing specific foundational skills (e.g. mathematics and code generation), neglecting an all-round evaluation of the computer science field. To bridge this gap, **we introduce CS-Bench**, the first bilingual (Chinese-English) benchmark dedicated to evaluating the performance of LLMs in computer science. CS-Bench comprises approximately 5K meticulously curated test samples, covering 26 subfields across 4 key areas of computer science, encompassing various task forms and divisions of knowledge and reasoning. Utilizing CS-Bench, **we conduct a comprehensive evaluation of over 30 mainstream LLMs**, revealing the relationship between CS performance and model scales. We also quantitatively analyze the reasons for failures in existing LLMs and highlight directions for improvements, including knowledge supplementation and CS-specific reasoning. Further **cross-capability experiments** show a high correlation between LLMs' capabilities in computer science and their abilities in mathematics and coding. Moreover, expert LLMs specialized in mathematics and coding also demonstrate strong performances in several CS subfields. Looking ahead, we envision CS-Bench serving as a cornerstone for LLM applications in the CS field and paving new avenues in assessing LLMs' diverse reasoning capabilities.
+
 
 <p align="center">
     <img src="assets/data-composition.png" width="40%"> <br>
   Source dataset distribution of <b>MathVista</b>.
 </p>
-
-With **MathVista**, we have conducted **a comprehensive, quantitative evaluation of 12 prominent foundation models**. The best-performing **GPT-4V** model achieves an overall accuracy of **49.9%**, substantially outperforming Bard, the second-best performer, by **15.1%**. Our in-depth analysis reveals that the superiority of **GPT-4V** is mainly attributed to its enhanced visual perception and mathematical reasoning. However, **GPT-4V** still falls short of human performance by **10.4%**, as it often struggles to understand complex figures and perform rigorous reasoning. This significant gap underscores the critical role that **MathVista** will play in the development of general-purpose AI agents capable of tackling mathematically intensive and visually rich real-world tasks. 
-
-<p align="center">
-    <img src="assets/score_leaderboard_gpt4v.png" width="70%"> <br>
-  Accuracy scores the testmini set (1,000 examples) of <b>MathVista</b>.
-</p>
-
-We further explore the new ability of **self-verification**, the use of **self-consistency**, and the **goal-directed multi-turn human-AI dialogues**, highlighting the promising potential of GPT-4V for future research.
-
-<p align="center">
-    <img src="assets/tease_scores_version4_gemini.png" width="80%"> <br>
-  Accuracy scores of one leading LLM (i.e., PoT GPT-4), four primary LMMs, random chance, and human performance on <b>MathVista</b>.
-</p>
-
-<details>
-<summary>🔍 See the accuracy scores without Gemini Ultra</summary>
-
-<p align="center">
-    <img src="assets/tease_scores_gpt4v.png" width="80%"> <br>
-  Accuracy scores of one leading LLM (i.e., PoT GPT-4), four primary LMMs, random chance, and human performance on <b>MathVista</b>.
-</p>
-
-</details>
 
 For more details, you can find our project page [here](https://mathvista.github.io/) and our paper [here](https://arxiv.org/abs/2310.02255).
 
