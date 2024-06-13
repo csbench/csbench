@@ -465,21 +465,6 @@ If you find **MathVista** useful for your your research and applications, please
 }
 ```
 
-## 🧠 Related Work
-
-Explore our additional research on **large language models** and **large multimodal models** , focusing on mathematical reasoning, scientific reasoning, and multimodal reasoning:
-
-- **[Chameleon]** [Chameleon: Plug-and-Play Compositional Reasoning with Large Language Models](https://chameleon-llm.github.io/)
-- **[ScienceQA]** [Learn to Explain: Multimodal Reasoning via Thought Chains for Science Question Answering](https://scienceqa.github.io/)
-- **[LLaMA-Adapter]** [LLaMA-Adapter: Efficient Fine-tuning of Language Models with Zero-init Attention](https://github.com/OpenGVLab/LLaMA-Adapter)
-- **[LLaMA-Adapter V2]** [LLaMA-Adapter V2: Parameter-Efficient Visual Instruction Model](https://github.com/OpenGVLab/LLaMA-Adapter)
-- **[DL4MATH]** [A Survey of Deep Learning for Mathematical Reasoning](https://arxiv.org/abs/2212.10535)
-- **[PromptPG]** [Dynamic Prompt Learning via Policy Gradient for Semi-structured Mathematical Reasoning](https://promptpg.github.io/)
-- **[SciBench]** [SciBench: Evaluating College-Level Scientific Problem-Solving Abilities of Large Language Models](https://arxiv.org/abs/2307.10635)
-- **[TheoremQA]** [TheoremQA: A Theorem-driven Question Answering dataset](https://arxiv.org/abs/2305.12524)
-- **[Līla]** [A Unified Benchmark for Mathematical Reasoning](https://lila.apps.allenai.org/)
-- **[IconQA]** [IconQA: A New Benchmark for Abstract Diagram Understanding and Visual Language Reasoning](https://iconqa.github.io/)
-- **[Inter-GPS]** [Inter-GPS: Interpretable Geometry Problem Solving with Formal Language and Symbolic Reasoning](https://lupantech.github.io/inter-gps/)
 
 ## 🤝 Contributors
 
