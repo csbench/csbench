@@ -183,13 +183,19 @@ Some notations in the table:
 | ERNIE-4 | 57.92 | 62.33 | 59.72 | 78.24 | 64.18 | 73.60 | 76.27 | 69.74 | 73.97 | 75.84 | 69.54 | 73.54 | 72.49 | 66.36 | 70.26 |
 
 
-## 📊 Dataset Examples
+## 📊 CS-Bench Dataset
 
-Examples of our newly annotated datasets: **IQTest**, **FunctionQA**, and **PaperQA**:
+### Statistics
 
 <p align="center">
-    <img src="assets/our_new_3_datasets.png" width="60%"> <br>
+    <img src="assets/appendix_pie.png" width="90%"> <br>
+    The leaderboard of LLMs on <b>CS-Bench</b>.
 </p>
+
+### Exmaples
+
+
+
 
 <details>
 <summary>🔍 Click to expand/collapse more examples</summary>
