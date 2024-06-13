@@ -56,7 +56,7 @@ For more details, you can find our project page [here](https://csbench.github.io
 
 ### Contributing the Leaderboard
 
-The evaluation instructions are available at [📝 Evaluation on CS-Bench](https://github.com/csbench/csbench?tab=readme-ov-file#-evaluations-on-csbench) .
+The evaluation instructions are available at [📝 Evaluation on CS-Bench](https://github.com/csbench/csbench/blob/main/README.md#-evaluation-on-cs-bench).
 
 To submit your results to the leaderboard, please send to  [this email](csbench2024@gmail.com) with your result json files.
 
