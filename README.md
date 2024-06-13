@@ -31,7 +31,7 @@ For more details, please refer to the project page with dataset exploration and 
 - [🏆 Leaderboard on CS-Bench (English) 🏆](https://github.com/csbench/csbench/blob/main/README.md#-leaderboard-on-cs-bench-english-)
 - [🏆 Leaderboard on CS-Bench (Chinese) 🏆](https://github.com/csbench/csbench/blob/main/README.md#-leaderboard-on-cs-bench-chinese-)
 - [📊 CS-Bench Dataset](https://github.com/csbench/csbench/blob/main/README.md#-cs-bench-dataset)
-- [📝 Evaluation on CS-Bench](https://github.com/csbench/csbench/blob/main/README.md#-evaluations-on-cs-bench)
+- [📝 Evaluation on CS-Bench](https://github.com/csbench/csbench/blob/main/README.md#-evaluation-on-cs-bench)
 - [📜 License](https://github.com/csbench/csbench/blob/main/README.md#-license)
 - [✅ Cite](https://github.com/csbench/csbench/blob/main/README.md#white_check_mark-cite)
 - [🤝 Contributors](https://github.com/csbench/csbench/blob/main/README.md#-contributors)
