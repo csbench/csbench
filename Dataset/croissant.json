@@ -1,0 +1,1394 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "name": "CS-Bench",
+  "description": "Understanding the performance of Large Language Models (LLMs) in computer science (CS) is fundamental to the research and application of LLMs within thefield.  However,  existing benchmarks only consider computer science as a minor category within science and engineering, lacking specialized evaluation andin-deep analysis  tailored specifically to computer science. Moreover, considering the intersection of computer science and code programming, mathematics, and reasoning abilities, we have grounds to believe that cross-capability research and analysis in CS can effectively propel the comprehensivedevelopment of the LLM community. ",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "license": "https://spdx.org/licenses/CC-BY-NC-4.0",
+  "url": "https://huggingface.co/datasets/CS-Bench",
+  "version": "0.0.0",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "Hugging face git repository",
+      "name": "Hugging face git repository",
+      "description": "The Hugging Face git repository of CS-Bench.",
+      "contentUrl": "https://huggingface.co/datasets/CS-Bench/CS-Bench/tree/main",
+      "encodingFormat": "git+https",
+      "sha256": "https://github.com/mlcommons/croissant/issues/80"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "jsonl-files",
+      "name": "jsonl-files",
+      "description": "JSONL files hosted on the Hugging face git repository.",
+      "containedIn": {
+        "@id": "Hugging face git repository"
+      },
+      "encodingFormat": "application/jsonlines",
+      "includes": "CS-Bench/*/*.jsonl"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "question_Multiple-choice_Knowledge",
+      "name": "question_Multiple-choice_Knowledge",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Knowledge/ID",
+          "name": "question_Multiple-choice_Knowledge/ID",
+          "description": "The unique identifier for the question.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "ID"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Knowledge/Split",
+          "name": "question_Multiple-choice_Knowledge/Split",
+          "description": "The Split of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Split"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Knowledge/Domain",
+          "name": "question_Multiple-choice_Knowledge/Domain",
+          "description": "The SubDomain of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Domain"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Knowledge/SubDomain",
+          "name": "question_Multiple-choice_Knowledge/SubDomain",
+          "description": "The Domain of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "SubDomain"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Knowledge/Format",
+          "name": "question_Multiple-choice_Knowledge/Format",
+          "description": "The Format of the question.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Format"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Knowledge/Tag",
+          "name": "question_Multiple-choice_Knowledge/Tag",
+          "description": "Tags associated with the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Tag"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Knowledge/Language",
+          "name": "question_Multiple-choice_Knowledge/Language",
+          "description": "The Language of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Language"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Knowledge/Question",
+          "name": "question_Multiple-choice_Knowledge/Question",
+          "description": "The question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Knowledge/A",
+          "name": "question_Multiple-choice_Knowledge/A",
+          "description": "CHOICE A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "A"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Knowledge/B",
+          "name": "question_Multiple-choice_Knowledge/B",
+          "description": "CHOICE B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "B"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Knowledge/C",
+          "name": "question_Multiple-choice_Knowledge/C",
+          "description": "CHOICE C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "C"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Knowledge/D",
+          "name": "question_Multiple-choice_Knowledge/D",
+          "description": "CHOICE D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "D"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Knowledge/Answer",
+          "name": "question_Multiple-choice_Knowledge/Answer",
+          "description": "The Answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "question_Fill-in-the-blank_Reasoning",
+      "name": "question_Fill-in-the-blank_Reasoning",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "question_Fill-in-the-blank_Reasoning/ID",
+          "name": "question_Fill-in-the-blank_Reasoning/ID",
+          "description": "The unique identifier for the question.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "ID"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Fill-in-the-blank_Reasoning/Split",
+          "name": "question_Fill-in-the-blank_Reasoning/Split",
+          "description": "The Split of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Split"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Fill-in-the-blank_Reasoning/Domain",
+          "name": "question_Fill-in-the-blank_Reasoning/Domain",
+          "description": "The SubDomain of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Domain"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Fill-in-the-blank_Reasoning/SubDomain",
+          "name": "question_Fill-in-the-blank_Reasoning/SubDomain",
+          "description": "The Domain of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "SubDomain"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Fill-in-the-blank_Reasoning/Format",
+          "name": "question_Fill-in-the-blank_Reasoning/Format",
+          "description": "The Format of the question.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Format"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Fill-in-the-blank_Reasoning/Tag",
+          "name": "question_Fill-in-the-blank_Reasoning/Tag",
+          "description": "Tags associated with the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Tag"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Fill-in-the-blank_Reasoning/Language",
+          "name": "question_Fill-in-the-blank_Reasoning/Language",
+          "description": "The Language of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Language"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Fill-in-the-blank_Reasoning/Question",
+          "name": "question_Fill-in-the-blank_Reasoning/Question",
+          "description": "The question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Fill-in-the-blank_Reasoning/Answer",
+          "name": "question_Fill-in-the-blank_Reasoning/Answer",
+          "description": "The Answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Fill-in-the-blank_Reasoning/Explanation",
+          "name": "question_Fill-in-the-blank_Reasoning/Explanation",
+          "description": "The Explanation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Explanation"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "question_Fill-in-the-blank_Knowledge",
+      "name": "question_Fill-in-the-blank_Knowledge",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "question_Fill-in-the-blank_Knowledge/ID",
+          "name": "question_Fill-in-the-blank_Knowledge/ID",
+          "description": "The unique identifier for the question.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "ID"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Fill-in-the-blank_Knowledge/Split",
+          "name": "question_Fill-in-the-blank_Knowledge/Split",
+          "description": "The Split of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Split"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Fill-in-the-blank_Knowledge/Domain",
+          "name": "question_Fill-in-the-blank_Knowledge/Domain",
+          "description": "The SubDomain of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Domain"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Fill-in-the-blank_Knowledge/SubDomain",
+          "name": "question_Fill-in-the-blank_Knowledge/SubDomain",
+          "description": "The Domain of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "SubDomain"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Fill-in-the-blank_Knowledge/Format",
+          "name": "question_Fill-in-the-blank_Knowledge/Format",
+          "description": "The Format of the question.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Format"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Fill-in-the-blank_Knowledge/Tag",
+          "name": "question_Fill-in-the-blank_Knowledge/Tag",
+          "description": "Tags associated with the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Tag"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Fill-in-the-blank_Knowledge/Language",
+          "name": "question_Fill-in-the-blank_Knowledge/Language",
+          "description": "The Language of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Language"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Fill-in-the-blank_Knowledge/Question",
+          "name": "question_Fill-in-the-blank_Knowledge/Question",
+          "description": "The question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Fill-in-the-blank_Knowledge/Answer",
+          "name": "question_Fill-in-the-blank_Knowledge/Answer",
+          "description": "The Answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "question_Multiple-choice_Reasoning",
+      "name": "question_Multiple-choice_Reasoning",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Reasoning/ID",
+          "name": "question_Multiple-choice_Reasoning/ID",
+          "description": "The unique identifier for the question.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "ID"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Reasoning/Split",
+          "name": "question_Multiple-choice_Reasoning/Split",
+          "description": "The Split of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Split"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Reasoning/Domain",
+          "name": "question_Multiple-choice_Reasoning/Domain",
+          "description": "The SubDomain of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Domain"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Reasoning/SubDomain",
+          "name": "question_Multiple-choice_Reasoning/SubDomain",
+          "description": "The Domain of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "SubDomain"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Reasoning/Format",
+          "name": "question_Multiple-choice_Reasoning/Format",
+          "description": "The Format of the question.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Format"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Reasoning/Tag",
+          "name": "question_Multiple-choice_Reasoning/Tag",
+          "description": "Tags associated with the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Tag"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Reasoning/Language",
+          "name": "question_Multiple-choice_Reasoning/Language",
+          "description": "The Language of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Language"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Reasoning/Question",
+          "name": "question_Multiple-choice_Reasoning/Question",
+          "description": "The question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Reasoning/A",
+          "name": "question_Multiple-choice_Reasoning/A",
+          "description": "CHOICE A",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "A"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Reasoning/B",
+          "name": "question_Multiple-choice_Reasoning/B",
+          "description": "CHOICE B",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "B"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Reasoning/C",
+          "name": "question_Multiple-choice_Reasoning/C",
+          "description": "CHOICE C",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "C"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Reasoning/D",
+          "name": "question_Multiple-choice_Reasoning/D",
+          "description": "CHOICE D",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "D"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Reasoning/Answer",
+          "name": "question_Multiple-choice_Reasoning/Answer",
+          "description": "The Answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Multiple-choice_Reasoning/Explanation",
+          "name": "question_Multiple-choice_Reasoning/Explanation",
+          "description": "The Explanation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Explanation"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "question_Assertion_Knowledge",
+      "name": "question_Assertion_Knowledge",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "question_Assertion_Knowledge/ID",
+          "name": "question_Assertion_Knowledge/ID",
+          "description": "The unique identifier for the question.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "ID"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Assertion_Knowledge/Split",
+          "name": "question_Assertion_Knowledge/Split",
+          "description": "The Split of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Split"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Assertion_Knowledge/Domain",
+          "name": "question_Assertion_Knowledge/Domain",
+          "description": "The SubDomain of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Domain"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Assertion_Knowledge/SubDomain",
+          "name": "question_Assertion_Knowledge/SubDomain",
+          "description": "The Domain of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "SubDomain"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Assertion_Knowledge/Format",
+          "name": "question_Assertion_Knowledge/Format",
+          "description": "The Format of the question.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Format"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Assertion_Knowledge/Tag",
+          "name": "question_Assertion_Knowledge/Tag",
+          "description": "Tags associated with the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Tag"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Assertion_Knowledge/Language",
+          "name": "question_Assertion_Knowledge/Language",
+          "description": "The Language of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Language"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Assertion_Knowledge/Question",
+          "name": "question_Assertion_Knowledge/Question",
+          "description": "The question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Assertion_Knowledge/Answer",
+          "name": "question_Assertion_Knowledge/Answer",
+          "description": "The Answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "question_Assertion_Reasoning",
+      "name": "question_Assertion_Reasoning",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "question_Assertion_Reasoning/ID",
+          "name": "question_Assertion_Reasoning/ID",
+          "description": "The unique identifier for the question.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "ID"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Assertion_Reasoning/Split",
+          "name": "question_Assertion_Reasoning/Split",
+          "description": "The Split of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Split"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Assertion_Reasoning/Domain",
+          "name": "question_Assertion_Reasoning/Domain",
+          "description": "The SubDomain of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Domain"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Assertion_Reasoning/SubDomain",
+          "name": "question_Assertion_Reasoning/SubDomain",
+          "description": "The Domain of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "SubDomain"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Assertion_Reasoning/Format",
+          "name": "question_Assertion_Reasoning/Format",
+          "description": "The Format of the question.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Format"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Assertion_Reasoning/Tag",
+          "name": "question_Assertion_Reasoning/Tag",
+          "description": "Tags associated with the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Tag"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Assertion_Reasoning/Language",
+          "name": "question_Assertion_Reasoning/Language",
+          "description": "The Language of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Language"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Assertion_Reasoning/Question",
+          "name": "question_Assertion_Reasoning/Question",
+          "description": "The question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Assertion_Reasoning/Answer",
+          "name": "question_Assertion_Reasoning/Answer",
+          "description": "The Answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Assertion_Reasoning/Explanation",
+          "name": "question_Assertion_Reasoning/Explanation",
+          "description": "The Explanation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Explanation"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "question_Open-ended_Reasoning",
+      "name": "question_Open-ended_Reasoning",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "question_Open-ended_Reasoning/ID",
+          "name": "question_Open-ended_Reasoning/ID",
+          "description": "The unique identifier for the question.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "ID"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Open-ended_Reasoning/Split",
+          "name": "question_Open-ended_Reasoning/Split",
+          "description": "The Split of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Split"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Open-ended_Reasoning/Domain",
+          "name": "question_Open-ended_Reasoning/Domain",
+          "description": "The SubDomain of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Domain"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Open-ended_Reasoning/SubDomain",
+          "name": "question_Open-ended_Reasoning/SubDomain",
+          "description": "The Domain of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "SubDomain"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Open-ended_Reasoning/Format",
+          "name": "question_Open-ended_Reasoning/Format",
+          "description": "The Format of the question.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Format"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Open-ended_Reasoning/Tag",
+          "name": "question_Open-ended_Reasoning/Tag",
+          "description": "Tags associated with the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Tag"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Open-ended_Reasoning/Language",
+          "name": "question_Open-ended_Reasoning/Language",
+          "description": "The Language of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Language"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Open-ended_Reasoning/Question",
+          "name": "question_Open-ended_Reasoning/Question",
+          "description": "The question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Open-ended_Reasoning/Answer",
+          "name": "question_Open-ended_Reasoning/Answer",
+          "description": "The Answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Open-ended_Reasoning/Explanation",
+          "name": "question_Open-ended_Reasoning/Explanation",
+          "description": "The Explanation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Explanation"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "question_Open-ended_Knowledge",
+      "name": "question_Open-ended_Knowledge",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "question_Open-ended_Knowledge/ID",
+          "name": "question_Open-ended_Knowledge/ID",
+          "description": "The unique identifier for the question.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "ID"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Open-ended_Knowledge/Split",
+          "name": "question_Open-ended_Knowledge/Split",
+          "description": "The Split of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Split"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Open-ended_Knowledge/Domain",
+          "name": "question_Open-ended_Knowledge/Domain",
+          "description": "The SubDomain of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Domain"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Open-ended_Knowledge/SubDomain",
+          "name": "question_Open-ended_Knowledge/SubDomain",
+          "description": "The Domain of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "SubDomain"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Open-ended_Knowledge/Format",
+          "name": "question_Open-ended_Knowledge/Format",
+          "description": "The Format of the question.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Format"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Open-ended_Knowledge/Tag",
+          "name": "question_Open-ended_Knowledge/Tag",
+          "description": "Tags associated with the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Tag"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Open-ended_Knowledge/Language",
+          "name": "question_Open-ended_Knowledge/Language",
+          "description": "The Language of the question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Language"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Open-ended_Knowledge/Question",
+          "name": "question_Open-ended_Knowledge/Question",
+          "description": "The question.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "question_Open-ended_Knowledge/Answer",
+          "name": "question_Open-ended_Knowledge/Answer",
+          "description": "The Answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "jsonl-files"
+            },
+            "extract": {
+              "column": "Answer"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
