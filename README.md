@@ -5,7 +5,6 @@
 ![Dataset](https://img.shields.io/badge/Dataset-CS--Bench-green)
 
 
-
 Code for the Paper "[CS-Bench: A Comprehensive Benchmark for Large Language Models towards Computer Science Mastery](https://pris-nlp.github.io/)".
 
 For more details, please refer to the project page with dataset exploration and key results: [https://csbench.github.io/](https://csbench.github.io/).
