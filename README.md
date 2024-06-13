@@ -408,34 +408,15 @@ python show_result.py your_file_path
 
 ## 📜 License
 
-The new contributions to our dataset are distributed under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license, including
-
-- The creation of three dataset: IQTest, FunctionQA, and Paper;
-- The filtering and cleaning of source datasets;
-- The standard formalization of instances for evaluation purposes;
-- The annotations of metadata.
-
-The copyright of the images and the questions belongs to the original authors, and the source of every image and original question can be found in the `metadata` field and in the [source.json](https://huggingface.co/datasets/AI4Math/MathVista/blob/main/source.json) file. Alongside this license, the following conditions apply:
-
-- **Purpose:** The dataset was primarily designed for use as a test set.
-- **Commercial Use:** The dataset can be used commercially as a test set, but using it as a training set is prohibited. By accessing or using this dataset, you acknowledge and agree to abide by these terms in conjunction with the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
-
-## :coffee: Stay Connected!
-
-Fantastic! I'm always open to engaging discussions, collaborations, or even just sharing a virtual coffee. To get in touch, visit [Pan Lu](https://lupantech.github.io/)'s homepage for contact information.
+Our dataset are distributed under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) license.
 
 
 ## :white_check_mark: Cite
 
-If you find **MathVista** useful for your your research and applications, please kindly cite using this BibTeX:
+If you find **CS-Bench** useful for your your research and applications, please kindly cite using this BibTeX:
 
 ```latex
-@inproceedings{lu2024mathvista,
-  title={MathVista: Evaluating Mathematical Reasoning of Foundation Models in Visual Contexts},
-  author={Lu, Pan and Bansal, Hritik and Xia, Tony and Liu, Jiacheng and Li, Chunyuan and Hajishirzi, Hannaneh and Cheng, Hao and Chang, Kai-Wei and Galley, Michel and Gao, Jianfeng},
-  booktitle={International Conference on Learning Representations (ICLR)},
-  year={2024}
-}
+TODO
 ```
 
 
@@ -443,6 +424,6 @@ If you find **MathVista** useful for your your research and applications, please
 
 Here are the key contributors to this project:
 
-[Pan Lu](https://lupantech.github.io/)<sup>1</sup>, [Hritik Bansal](https://sites.google.com/view/hbansal)<sup>1</sup>, [Tony Xia](https://tonyxia2001.github.io/)<sup>1</sup>, [Jiacheng Liu](https://liujch1998.github.io/)<sup>2</sup>, [Chunyuan Li](https://chunyuan.li/)<sup>3</sup>, [Hannaneh Hajishirzi](https://homes.cs.washington.edu/~hannaneh/)<sup>2</sup>, [Hao Cheng](https://sites.google.com/site/hcheng2site/Home)<sup>3</sup>, [Kai-Wei Chang](http://web.cs.ucla.edu/~kwchang/)<sup>1</sup>, [Michel Galley](https://www.microsoft.com/en-us/research/people/mgalley/?from=https://research.microsoft.com/~mgalley&type=exact)<sup>3</sup>, [Jianfeng Gao](https://www.microsoft.com/en-us/research/people/jfgao/)<sup>3</sup>
+Xiaoshuai Song, Muxi Diao, Guanting Dong, Zhengyang Wang, Yujia Fu, Runqi Qiao, Zhexu Wang, Dayuan Fu, Huangxuan Wu, Bin Liang, Weihao Zeng, Yejie Wang, Zhuoma GongQue, Jianing Yu, Qiuna Tan, Weiran Xu
 
-<sup>1</sup>University of California, Los Angeles, <sup>2</sup>University of Washington, <sup>3</sup>Microsoft Research
+[PRIS-NLP Research Group](https://pris-nlp.github.io/) , Beijing University of Posts and Telecommunications
