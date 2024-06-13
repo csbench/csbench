@@ -232,7 +232,6 @@ Option 2: Use Step 1 to construct the reasoning prompt, use the vllm reasoning w
 ### Install Dependencies
 ```
 git clone https://github.com/csbench/csbench
-cd csbench_code
 ```
 
 ### Evaluate a new model on CS-Bench:
