@@ -27,7 +27,7 @@ For more details, please refer to the project page with dataset exploration and 
 ## Outlines
 
 - [💥 News 💥](https://github.com/lupantech/MathVista/blob/main/README.md#-news-)
-- [👀 About MathVista](https://github.com/lupantech/MathVista/blob/main/README.md#-about-mathvista)
+- [👀 About CS-Bench](https://github.com/csbench/csbench/blob/main/README.md#-about-cs-bench)
 - [🏆 Leaderboard 🏆](https://github.com/lupantech/MathVista/blob/main/README.md#-leaderboard-)
   - [Contributing the Leaderboard](https://github.com/lupantech/MathVista/blob/main/README.md#contributing-the-leaderboard)
   - [Leaderboard on the testmini subset](https://github.com/lupantech/MathVista/blob/main/README.md#leaderboard-on-the-testmini-subset)
