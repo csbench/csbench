@@ -70,8 +70,8 @@ For more details, please refer to the project page with dataset exploration and 
 
 
 <p align="center">
-    <img src="assets/data-composition.png" width="40%"> <br>
-  Source dataset distribution of <b>MathVista</b>.
+    <img src="assets/CS_Bench-main.png" width="70%"> <br>
+  Overview diagram and statistics of <b>CS-Bench</b>.
 </p>
 
 For more details, you can find our project page [here](https://mathvista.github.io/) and our paper [here](https://arxiv.org/abs/2310.02255).
