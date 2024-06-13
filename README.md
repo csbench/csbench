@@ -21,7 +21,7 @@ For more details, please refer to the project page with dataset exploration and 
 
 <p align="center">
     <img src="assets/csbench_logo_2.png" width="30%"> <br>
-  Tentative logo for <b>MathVista</b>. 
+  Tentative logo for <b>CS-Bench</b>. 
 </p>
 ## Outlines
 
