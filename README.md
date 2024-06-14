@@ -301,7 +301,13 @@ Our dataset are distributed under the [CC BY-NC 4.0](https://creativecommons.org
 If you find **CS-Bench** useful for your your research and applications, please kindly cite using this BibTeX:
 
 ```latex
-TODO
+@misc{song2024csbench,
+      title={CS-Bench: A Comprehensive Benchmark for Large Language Models towards Computer Science Mastery}, 
+      author={Xiaoshuai Song and Muxi Diao and Guanting Dong and Zhengyang Wang and Yujia Fu and Runqi Qiao and Zhexu Wang and Dayuan Fu and Huangxuan Wu and Bin Liang and Weihao Zeng and Yejie Wang and Zhuoma GongQue and Jianing Yu and Qiuna Tan and Weiran Xu},
+      year={2024},
+      eprint={2406.08587},
+      archivePrefix={arXiv}
+}
 ```
 
 
