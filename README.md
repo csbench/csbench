@@ -5,14 +5,14 @@
 ![Dataset](https://img.shields.io/badge/Dataset-CS--Bench-green)
 
 
-Code for the Paper "[CS-Bench: A Comprehensive Benchmark for Large Language Models towards Computer Science Mastery](https://pris-nlp.github.io/)".
+Code for the Paper "[CS-Bench: A Comprehensive Benchmark for Large Language Models towards Computer Science Mastery](https://arxiv.org/abs/2406.08587)".
 
 For more details, please refer to the project page with dataset exploration and key results: [https://csbench.github.io/](https://csbench.github.io/).
 
 :bell: If you have any questions or suggestions, please don't hesitate to let us know. You can comment on the [Email](https://csbench2024@gmail.com), or post an issue on this repository.
 
 
-[[Webpage](https://csbench.github.io/)] [[Paper](https://pris-nlp.github.io/)] [[Huggingface Dataset](https://huggingface.co/datasets/CS-Bench/CS-Bench)] [[Leaderboard](https://csbench.github.io/#leaderboard)] [[Result Explorer](https://csbench.github.io/#explorer)]
+[[Webpage](https://csbench.github.io/)] [[Paper](https://arxiv.org/abs/2406.08587)] [[Huggingface Dataset](https://huggingface.co/datasets/CS-Bench/CS-Bench)] [[Leaderboard](https://csbench.github.io/#leaderboard)] [[Result Explorer](https://csbench.github.io/#explorer)]
 
 <p align="center">
     <img src="assets/csbench_logo_2.png" width="30%"> <br>
@@ -33,7 +33,7 @@ For more details, please refer to the project page with dataset exploration and 
 
 
 ## 💥 News 💥
-- **[2023.6.14]** Our paper is now accessible at https://pris-nlp.github.io/.
+- **[2023.6.14]** Our paper is now accessible at https://arxiv.org/abs/2406.08587.
 - **[2024.6.13]** Our dataset is now accessible at [Huggingface Datasets](https://huggingface.co/datasets/CS-Bench/CS-Bench).
 - **[2024.6.12]** Our project homepage can be accessed at https://csbench.github.io/.
 
@@ -48,7 +48,7 @@ For more details, please refer to the project page with dataset exploration and 
   Overview diagram and statistics of <b>CS-Bench</b>.
 </p>
 
-For more details, you can find our project page [here](https://csbench.github.io/) and our paper [here](https://pris-nlp.github.io/).
+For more details, you can find our project page [here](https://csbench.github.io/) and our paper [here](https://arxiv.org/abs/2406.08587).
 
 ## 🏆 Leaderboard on CS-Bench (English) 🏆
 
