@@ -316,4 +316,4 @@ Here are the key contributors to this project:
 
 Xiaoshuai Song, Muxi Diao, Guanting Dong, Zhengyang Wang, Yujia Fu, Runqi Qiao, Zhexu Wang, Dayuan Fu, Huangxuan Wu, Bin Liang, Weihao Zeng, Yejie Wang, Zhuoma GongQue, Jianing Yu, Qiuna Tan, Weiran Xu
 
-[PRIS-NLP Research Group](https://pris-nlp.github.io/) , Beijing University of Posts and Telecommunications
+[PRIS-NLP Research Group](https://pris-nlp.github.io/) , Beijing University of Posts and Telecommunications.
