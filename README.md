@@ -18,6 +18,18 @@ For more details, please refer to the project page with dataset exploration and 
     <img src="assets/csbench_logo_2.png" width="30%"> <br>
 </p>
 
+
+If you find **CS-Bench** useful for your your research and applications, please kindly cite using this BibTeX:
+
+```latex
+@misc{song2024csbench,
+      title={CS-Bench: A Comprehensive Benchmark for Large Language Models towards Computer Science Mastery}, 
+      author={Xiaoshuai Song and Muxi Diao and Guanting Dong and Zhengyang Wang and Yujia Fu and Runqi Qiao and Zhexu Wang and Dayuan Fu and Huangxuan Wu and Bin Liang and Weihao Zeng and Yejie Wang and Zhuoma GongQue and Jianing Yu and Qiuna Tan and Weiran Xu},
+      journal={arXiv preprint arXiv:2406.08587},
+      year={2024},
+}
+```
+
 ## Outlines
 
 - [💥 News 💥](https://github.com/csbench/csbench/blob/main/README.md#-news-)
@@ -27,7 +39,6 @@ For more details, please refer to the project page with dataset exploration and 
 - [📊 CS-Bench Dataset](https://github.com/csbench/csbench/blob/main/README.md#-cs-bench-dataset)
 - [📝 Evaluation on CS-Bench](https://github.com/csbench/csbench/blob/main/README.md#-evaluation-on-cs-bench)
 - [📜 License](https://github.com/csbench/csbench/blob/main/README.md#-license)
-- [✅ Cite](https://github.com/csbench/csbench/blob/main/README.md#white_check_mark-cite)
 - [🤝 Contributors](https://github.com/csbench/csbench/blob/main/README.md#-contributors)
 
 
@@ -223,7 +234,7 @@ Some notations in the table:
 ## 📝 Evaluation on CS-Bench
 
 ### Option
-Option 1: Use Step 1 to construct the reasoning prompt, replace Step 2.1 with your own reasoning method to obtain the model's output, and use Steps 3 and 4 to get the model's scores.
+Option 1: Use Step 1 to construct the reasoning prompt, replace Step 2.1 with your own inference method to obtain the model's output, and use Steps 3 and 4 to get the model's scores.
 
 Option 2: Use Step 1 to construct the reasoning prompt, use the vllm reasoning we provide in Step 2.1 (requires environment setup) to obtain the model's output, and use Steps 3 and 4 to get the model's scores.
 
@@ -295,19 +306,6 @@ python show_result.py your_file_path
 
 Our dataset are distributed under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) license.
 
-
-## :white_check_mark: Cite
-
-If you find **CS-Bench** useful for your your research and applications, please kindly cite using this BibTeX:
-
-```latex
-@misc{song2024csbench,
-      title={CS-Bench: A Comprehensive Benchmark for Large Language Models towards Computer Science Mastery}, 
-      author={Xiaoshuai Song and Muxi Diao and Guanting Dong and Zhengyang Wang and Yujia Fu and Runqi Qiao and Zhexu Wang and Dayuan Fu and Huangxuan Wu and Bin Liang and Weihao Zeng and Yejie Wang and Zhuoma GongQue and Jianing Yu and Qiuna Tan and Weiran Xu},
-      journal={arXiv preprint arXiv:2406.08587},
-      year={2024},
-}
-```
 
 
 ## 🤝 Contributors
