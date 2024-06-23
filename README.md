@@ -22,11 +22,11 @@ For more details, please refer to the project page with dataset exploration and 
 If you find **CS-Bench** useful for your your research and applications, please kindly cite using this BibTeX:
 
 ```latex
-@misc{song2024csbench,
-      title={CS-Bench: A Comprehensive Benchmark for Large Language Models towards Computer Science Mastery}, 
-      author={Xiaoshuai Song and Muxi Diao and Guanting Dong and Zhengyang Wang and Yujia Fu and Runqi Qiao and Zhexu Wang and Dayuan Fu and Huangxuan Wu and Bin Liang and Weihao Zeng and Yejie Wang and Zhuoma GongQue and Jianing Yu and Qiuna Tan and Weiran Xu},
-      journal={arXiv preprint arXiv:2406.08587},
-      year={2024},
+@article{song2024cs,
+  title={CS-Bench: A Comprehensive Benchmark for Large Language Models towards Computer Science Mastery},
+  author={Song, Xiaoshuai and Diao, Muxi and Dong, Guanting and Wang, Zhengyang and Fu, Yujia and Qiao, Runqi and Wang, Zhexu and Fu, Dayuan and Wu, Huangxuan and Liang, Bin and others},
+  journal={arXiv preprint arXiv:2406.08587},
+  year={2024}
 }
 ```
 
