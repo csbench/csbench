@@ -1,4 +1,4 @@
-# CS-Bench: A Comprehensive Benchmark for Large Language Models towards Computer Science Mastery
+# [CS-Bench: A Comprehensive Benchmark for Large Language Models towards Computer Science Mastery](https://arxiv.org/pdf/2406.08587)
 
 ![Large Language Models](https://img.shields.io/badge/Task-Large%20Language%20Models-red)
 ![Computer Science](https://img.shields.io/badge/Field-Computer%20Science-blue)
