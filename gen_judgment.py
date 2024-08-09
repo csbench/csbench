@@ -135,13 +135,13 @@ def extract_fill_in_blank_score(gpt_output):
     if not isinstance(gpt_output, str):
         gpt_output = str(gpt_output)
     matches = re.findall(r'\b(0|1)\b', gpt_output)
-    return int(matches[0]) if matches else 0
+    return int(matches[-1]) if matches else 0
 
 def extract_open_ended_score(gpt_output):
     if not isinstance(gpt_output, str):
         gpt_output = str(gpt_output)
     matches = re.findall(r'\b([1-9]|10)\b', gpt_output)
-    return int(matches[0]) / 10 if matches else 0
+    return int(matches[-1]) / 10 if matches else 0
 
 def main():
     parser = argparse.ArgumentParser(description="Process JSON files for grading.")
