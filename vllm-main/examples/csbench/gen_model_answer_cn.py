@@ -69,7 +69,7 @@ if __name__ == "__main__":
 
     print(f"begin general {len(prompts)} samples...")
     outputs = llm.generate(prompts, sampling_params)
-    with open(args.save_path + '_cn.json', "w") as f:
+    with open(args.save_path + '_cn.json', "w", encoding='utf-8') as f:
         # Print the outputs.
         for item, output in zip(dat, outputs):
             prompt = output.prompt
