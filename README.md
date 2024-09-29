@@ -21,7 +21,7 @@ For more details, please refer to the project page with dataset exploration and 
 
 If you find **CS-Bench** useful for your your research and applications, please kindly cite using this BibTeX:
 
-```latex
+```bibtex
 @article{song2024cs,
   author       = {Xiaoshuai Song and
                   Muxi Diao and
