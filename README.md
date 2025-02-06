@@ -69,6 +69,7 @@ If you find **CS-Bench** useful for your your research and applications, please 
 
 ## 💥 News 💥
 
+- **[2025.2.6]** We release the French and German versions of the test and valid sets.
 - **[2025.1.23]** Our paper is now accepted at ICLR🥳.
 - **[2024.7.11]** We  contribute our dataset to OpenCompass at https://hub.opencompass.org.cn/dataset-detail/CS-Bench.
 - **[2024.6.14]** Our paper is now accessible at https://arxiv.org/abs/2406.08587.
