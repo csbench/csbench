@@ -312,34 +312,12 @@ Xiaoshuai Song, Muxi Diao, Guanting Dong, Zhengyang Wang, Yujia Fu, Runqi Qiao, 
 If you find **CS-Bench** useful for your your research and applications, please kindly cite using this BibTeX:
 
 ```bibtex
-@article{song2024cs,
-  author       = {Xiaoshuai Song and
-                  Muxi Diao and
-                  Guanting Dong and
-                  Zhengyang Wang and
-                  Yujia Fu and
-                  Runqi Qiao and
-                  Zhexu Wang and
-                  Dayuan Fu and
-                  Huangxuan Wu and
-                  Bin Liang and
-                  Weihao Zeng and
-                  Yejie Wang and
-                  Zhuoma Gongque and
-                  Jianing Yu and
-                  Qiuna Tan and
-                  Weiran Xu},
-  title        = {CS-Bench: {A} Comprehensive Benchmark for Large Language Models towards
-                  Computer Science Mastery},
-  journal      = {CoRR},
-  volume       = {abs/2406.08587},
-  year         = {2024},
-  url          = {https://doi.org/10.48550/arXiv.2406.08587},
-  doi          = {10.48550/ARXIV.2406.08587},
-  eprinttype    = {arXiv},
-  eprint       = {2406.08587},
-  timestamp    = {Tue, 09 Jul 2024 17:23:21 +0200},
-  biburl       = {https://dblp.org/rec/journals/corr/abs-2406-08587.bib},
-  bibsource    = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{
+song2025csbench,
+title={{CS}-Bench: A Comprehensive Benchmark for Large Language Models towards Computer Science Mastery},
+author={Xiaoshuai Song and Muxi Diao and Guanting Dong and Zhengyang Wang and Yujia Fu and Runqi Qiao and Zhexu Wang and Dayuan Fu and Huangxuan Wu and Bin Liang and Weihao Zeng and Yejie Wang and Zhuoma GongQue and Jianing Yu and Qiuna Tan and Weiran Xu},
+booktitle={The Thirteenth International Conference on Learning Representations},
+year={2025},
+url={https://openreview.net/forum?id=fjEZ2LPceZ}
 }
 ```
