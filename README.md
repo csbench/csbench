@@ -29,7 +29,6 @@ For more details, please refer to the project page with dataset exploration and 
 - [📝 Evaluation on CS-Bench](https://github.com/csbench/csbench/blob/main/README.md#-evaluation-on-cs-bench)
 - [📜 License](https://github.com/csbench/csbench/blob/main/README.md#-license)
 - [🤝 Contributors](https://github.com/csbench/csbench/blob/main/README.md#-contributors)
-- [🤝 Cite CS-Bench](https://github.com/csbench/csbench/blob/main/README.md#-Cite-CS-Bench)
 
 ## 💥 News 💥
 
